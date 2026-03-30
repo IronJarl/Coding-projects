@@ -3,6 +3,7 @@ import time
 def Even():
      #0 is in fact an even number despite it's appearance
      num=0
+     amount=0
      while True:
             time.sleep(.1)
             #I believe this is the basis of all generators so it's needed
@@ -14,4 +15,4 @@ try:
 #Can't forget about the escape route
 except KeyboardInterrupt:
     print("That's enough")
-#For some reason, my comments weren't visible in the repo. Updating it
+    print("Amount generated:", int(1+value/2))
