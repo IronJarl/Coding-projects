@@ -26,6 +26,6 @@ except KeyboardInterrupt:
     print(f"Largest prime: {prime[-1]}")
     #Had a little help coming up with this method for porting data as a file.
     strings = [str(p) for p in prime]
-    file = ",".join(strings)
+    file = "\n".join(strings)
     with open("primes.csv", "w") as my_file:
         my_file.write(file)

@@ -15,7 +15,6 @@ while k==-1:
         k=int(input("Choose a door 0, 1 or 2}"))
     #The result for staying is created
     result=Doors[k]
-    #I could probably work out the pops but it works well enough for now
     Doors.pop(k)
     Keys.pop(k)
     #K changes into its second role
