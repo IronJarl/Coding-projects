@@ -1,4 +1,4 @@
-#Need the ability to randomly sort
+#Need the ability to randomly sort and graph
 import matplotlib.pyplot as plt
 import random
 possibility="I need to define this ahead of time?"
@@ -6,18 +6,20 @@ j=0
 w=0
 k=0
 switch=[]
-stay=[]
-while j<10000:
+n=0
+while n <= 0:
+    n=int(input("Positive value for tests:"))
+while j<n:
     #Necessary initial lists
     Doors= ["Car", "Goat", "Goat"]
     Keys=[0,1,2]
     #Results shuffle but the doors remain the same
     random.shuffle(Doors)
     #The first choice barely matters besides causing the paradoxical answer of 2 to 1
+    #Could probably automize to 1 but this shows that randomness remains true
     k=random.randint(0,2)
     #The result for staying is created
     result=Doors[k]
-    #K changes into its second role
     k=0
     if result=="Goat":
         possibility="Car"
@@ -25,12 +27,12 @@ while j<10000:
         possibility="Goat"
     if possibility=="Car":
         w +=1
+    #The win rate is naturally wins/tries and since tries=j+1 in this context
     switch.append(w / (j+1))
-    #Reveal if won or loss. Well goat or car because goats are good aswell.
-    #K takes it's final role as a restart button
     j +=1
-print("Projected win rate:", 2/3)
-print("Win rate:", w / j)
+#Once more got a lot of this actual graphing from an outside source. Mostly me though
+print("Projected win rate:", 0.6666666666666666)
+print("Overall Win rate:", w / j)
 plt.plot(switch)
 plt.title("See how close it gets")
 plt.xlabel("Trials")
