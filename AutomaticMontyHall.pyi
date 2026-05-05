@@ -39,3 +39,4 @@ plt.xlabel("Trials")
 plt.ylabel("Success rate")
 plt.axhline(2/3, color='r', linestyle='--')
 plt.show()
+#If wonder how it works for staying consistently, it's just 1-SwitchWin=StayWin
