@@ -13,7 +13,7 @@ arrayread=np.array([0]*20)
 #This is currently a rule 50 model. I may switch to a varying system later. So that the rule is randomized. 
 try:
     while True:
-        time.sleep(.2)
+        time.sleep(.5)
         print(z)
         for x in range(20):
             if x!=0:
